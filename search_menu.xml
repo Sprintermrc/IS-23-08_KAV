@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <item
+        android:id="@+id/actionSearch"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/sortByYear"
+        android:orderInCategory="6"
+        android:title="Сортировать по году публикации" />
+    <item
+        android:id="@+id/sortByAuthor"
+        android:orderInCategory="5"
+        android:title="Сортировать по Автору" />
+    <item
+        android:id="@+id/sortByName"
+        android:orderInCategory="4"
+        android:title="Сортировать по названию" />
+    <item
+        android:id="@+id/addBook"
+        android:orderInCategory="3"
+        android:title="Добавить книгу" />
+    <item
+        android:id="@+id/goToBooks"
+        android:orderInCategory="2"
+        android:title="Список книг" />
+    <item
+        android:id="@+id/Home"
+        android:orderInCategory="1"
+        android:title="Главное меню" />
+    <item
+        android:id="@+id/sortByPublisher"
+        android:orderInCategory="7"
+        android:title="Сортировать по издателю" />
+</menu>
