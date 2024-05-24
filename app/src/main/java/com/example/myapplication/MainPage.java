@@ -30,21 +30,17 @@ public class MainPage extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        checkt = findViewById(R.id.check);
         int id = item.getItemId();
         if (id == R.id.Home) {
-            checkt.setText("1");
             Intent intenthome = new Intent(MainPage.this, MainPage.class);
             startActivity(intenthome);
         }
         else if (id == R.id.goToBooks)
         {
-            checkt.setText("2");
             Intent intentgotobooks = new Intent(MainPage.this, MainActivity.class);
             startActivity(intentgotobooks);
         }
         else if (id == R.id.addBook) {
-            checkt.setText("3");
             Intent intentaddbook = new Intent(MainPage.this, AddBook.class);
             startActivity(intentaddbook);
         }

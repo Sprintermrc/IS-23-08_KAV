@@ -15,6 +15,7 @@ public class AddBook extends AppCompatActivity {
     private EditText addAuthor;
     private EditText addName;
     private EditText addYear;
+    private EditText addPublisher;
 
 
 
@@ -37,12 +38,15 @@ public class AddBook extends AppCompatActivity {
          addAuthor = findViewById(R.id.addAuthor);
          addName = findViewById(R.id.addName);
          addYear = findViewById(R.id.addYear);
+         addPublisher = findViewById(R.id.addPublisher);
          String nameadd = addName.getText().toString();
          String authoradd = addAuthor.getText().toString();
          String yearadd = addYear.getText().toString();
+         String publisheradd = addPublisher.getText().toString();
          intent.putExtra("name", nameadd);
          intent.putExtra("author",authoradd);
          intent.putExtra("year",yearadd);
+         intent.putExtra("publisher", publisheradd);
          startActivity(intent);
      }
 

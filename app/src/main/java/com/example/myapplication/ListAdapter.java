@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.app.LauncherActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,19 +33,21 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     @Override
     public ListAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-       // View view = inflater.inflate(R.layout.list_item, parent, false);
+
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item, parent, false);
 
         return new ViewHolder(view);
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Book book = books.get(position);
 
-        holder.nameView.setText(book.getName().toString());
-        holder.authorView.setText(book.getAuthor().toString());
-        holder.yearView.setText(book.getYear().toString());
+        holder.nameView.setText(book.getName());
+        holder.authorView.setText(book.getAuthor());
+        holder.yearView.setText(book.getYear());
+        holder.publisherView.setText(book.getPublisher());
     }
 
     @Override
@@ -71,13 +72,14 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
 
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView nameView, authorView, yearView;
+        private TextView nameView, authorView, yearView, publisherView;
 
         ViewHolder(View view) {
             super(view);
             nameView = view.findViewById(R.id.name);
             authorView = view.findViewById(R.id.author);
             yearView = view.findViewById(R.id.year);
+            publisherView = view.findViewById(R.id.publisher);
         }
     }
 }
